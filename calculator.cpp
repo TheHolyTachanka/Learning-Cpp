@@ -17,17 +17,21 @@ int subtract(int firstNumber, int secondNumber) {
   return firstNumber - secondNumber;
 }
 
-int devide(int firstNumber, int secondNumber) {
+int divide(int firstNumber, int secondNumber) {
   return firstNumber / secondNumber;
 }
 
-int multiple(int firstNumber, int secondNumber) {
+int multiply(int firstNumber, int secondNumber) {
   return firstNumber * secondNumber;
+}
+
+int modulus(int firstNumber, int secondNumber) {
+  return firstNumber % secondNumber;
 }
 
 int main() {
   string type;
-  cout << "Enter Operator type: \n 1:add \n 2:subtract \n 3:devide \n 4:multiple" << endl;
+  cout << "Enter Operator type: \n 1:add \n 2:subtract \n 3:divide \n 4:multiply \n 5:modulus" << endl;
   cin >> type;
   int firstNumber;
   int secondNumber;
@@ -36,16 +40,16 @@ int main() {
   cout << "Enter second number:" << endl;
   cin >> secondNumber;
   if (type == "1") {
-    cout << "You number is:" << add(firstNumber, secondNumber) << endl;
+    cout << "Your number is:\t" << add(firstNumber, secondNumber) << endl;
   } else if (type == "2") {
-    cout << "You number is:" << subtract(firstNumber, secondNumber) << endl;
+    cout << "Your number is:\t" << subtract(firstNumber, secondNumber) << endl;
   } else if (type == "3") {
-    cout << "You number is:" << devide(firstNumber, secondNumber) << endl;
+    cout << "Your number is:\t" << divide(firstNumber, secondNumber) << endl;
   } else if (type == "4") {
-    cout << "You number is:" << multiple(firstNumber, secondNumber) << endl;
+    cout << "Your number is:\t" << multipy(firstNumber, secondNumber) << endl;
+  } else if (type=="5"){
+    cout << "Your number is:\t" << modulus(firstNumber, secondNumber) <<endl;
   } else {
     cout << "Invalid operator" << endl;
   }
-};
-
-
+}
